@@ -5,22 +5,62 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>RegistServlet</servlet-name>
-        <servlet-class>com.zzy.web.RegistServlet</servlet-class>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.zzy.web.UserServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
     <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.zzy.web.LoginServlet</servlet-class>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>com.zzy.web.BookServlet</servlet-class>
     </servlet>
-
-
     <servlet-mapping>
-        <servlet-name>RegistServlet</servlet-name>
-        <url-pattern>/registServlet</url-pattern>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/manager/bookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ClientBookServlet</servlet-name>
+        <servlet-class>com.zzy.web.ClientBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientBookServlet</servlet-name>
+        <url-pattern>/client/bookServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/loginServlet</url-pattern>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <url-pattern>/kaptcha.jpg</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.zzy.web.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.zzy.web.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orderServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>ManagerFilter</filter-name>
+        <filter-class>com.zzy.filter.ManagerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ManagerFilter</filter-name>
+        <url-pattern>/pages/manager/*</url-pattern>
+        <url-pattern>/manager/bookServlet</url-pattern>
+    </filter-mapping>
 </web-app>

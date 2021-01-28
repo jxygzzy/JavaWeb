@@ -1,4 +1,4 @@
-package com.zzy.service.impl;
+package com.zzy.service;
 
 import com.zzy.pojo.User;
 

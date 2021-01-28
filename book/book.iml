@@ -20,10 +20,25 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.107" level="application_server_libraries" />
-    <orderEntry type="library" name="druid-1.1.9" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-8.0.23" level="project" />
-    <orderEntry type="library" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" name="commons-dbutils-1.3" level="project" />
-    <orderEntry type="library" name="commons-fileupload-1.2.1" level="project" />
+    <orderEntry type="module-library">
+      <library name="book_lib">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/commons-dbutils-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/commons-io-1.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/druid-1.1.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/hamcrest-core-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/junit-4.12.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/kaptcha-2.3.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.23.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-impl-1.2.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-spec-1.2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

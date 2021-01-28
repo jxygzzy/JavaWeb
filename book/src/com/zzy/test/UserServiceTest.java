@@ -1,11 +1,9 @@
 package com.zzy.test;
 
 import com.zzy.pojo.User;
-import com.zzy.service.UserServiceImpl;
-import com.zzy.service.impl.UserService;
+import com.zzy.service.impl.UserServiceImpl;
+import com.zzy.service.UserService;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UserServiceTest {
 

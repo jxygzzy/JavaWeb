@@ -1,9 +1,9 @@
-package com.zzy.service;
+package com.zzy.service.impl;
 
 import com.zzy.dao.UserDao;
 import com.zzy.dao.impl.UserDaoImpl;
 import com.zzy.pojo.User;
-import com.zzy.service.impl.UserService;
+import com.zzy.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
