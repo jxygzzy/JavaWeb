@@ -12,8 +12,9 @@ public class JdbcUtilsTest {
         for (int i = 0; i < 100; i++) {
             Connection connection = JdbcUtils.getConnection();
             System.out.println(connection);
-            JdbcUtils.Close(connection);
+//            JdbcUtils.Close(connection);
 
+            JdbcUtils.commitAndClose();
         }
     }
 }

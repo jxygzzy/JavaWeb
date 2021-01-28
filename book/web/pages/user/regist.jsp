@@ -10,9 +10,20 @@
         // 页面加载完成之后
         $(function () {
 
+            $("#username").blur(function () {
+                var username = this.value;
+                $.getJSON("${basePath}userServlet", "action=ajaxExistsUsername&username=" + username, function (data) {
+                    if (data.exitsUsername) {
+                        $("span.errorMsg").text("用户名已存在");
+
+                    } else {
+                        $("span.errorMsg").text("用户名可用");
+                    }
+                });
+            })
             $("#code_img").click(function () {
 
-                this.src = "${basePath}kaptcha.jpg?d="+new Date();
+                this.src = "${basePath}kaptcha.jpg?d=" + new Date();
             })
 
             // 给注册绑定单击事件
